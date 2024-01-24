@@ -1,11 +1,14 @@
 {
-  "plugins": [{ "type": "node-workspace" }],
+  "plugins": [{ "type": "node-workspace", "merge": false }],
+
   "group-pull-request-title-pattern": "chore: release ${component} ${scope} ${version}",
   "pull-request-title-pattern": "chore: release ${component} ${scope} ${version}",
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
+  "separate-pull-requests": true,
   "packages": {
     ".": {
+      "release-type": "node",
       "component": "@contract-case/case-boundary",
       "bump-minor-pre-major": true,
       "bump-patch-for-minor-pre-major": true,
