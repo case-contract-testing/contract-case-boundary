@@ -6,9 +6,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd)" # Figure out where the 
 
 npm install # We can't do npm ci because lerna has optional dependencies :(
 
-npx lerna --ci run format:check
-npx lerna --ci run build
-npx lerna --ci run lint
-npx lerna --ci run test
-npx lerna --ci run test:verify
+npm run format:check
+npm run lint
+npm run build
+npm run package
 

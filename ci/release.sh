@@ -5,6 +5,5 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd)" # Figure out where the 
 . "$SCRIPT_DIR"/lib/robust-bash.sh 
 
 
-npx lerna publish from-package --no-push --no-private --yes
-npx lerna run publish:maven
-npm run update-docs
+echo "release.sh is NOT IMPLEMENTED"
+exit 1
