@@ -23,7 +23,7 @@
     "build": "jsii",
     "build:docs": "api-extractor run --verbose && api-documenter markdown --input-folder api-extractor --output-folder docs && npm run format:fix",
     "build:docs:local": "api-extractor run --local --verbose && api-documenter markdown --input-folder api-extractor --output-folder docs && npm run format:fix",
-    "prepackage": "rimraf dist",
+    "prepackage": "rimraf dist && npm run build:docs",
     "package": "jsii-pacmak",
     "publish:maven": "publib-maven",
     "lint": "eslint src --ext .ts --config .eslintrc.json",
@@ -94,51 +94,5 @@
     "@contract-case/case-core",
     "@contract-case/case-entities-internal",
     "read-pkg-up"
-  ],
-  "stability": "stable",
-  "nx": {
-    "tasksRunnerOptions": {
-      "default": {
-        "runner": "nx/tasks-runners/default",
-        "options": {
-          "cacheableOperations": [
-            "build",
-            "package",
-            "lint",
-            "format:check",
-            "test"
-          ]
-        }
-      }
-    },
-    "targetDefaults": {
-      "prebuild": {
-        "dependsOn": [
-          "^prebuild"
-        ]
-      },
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "outputs": [
-          "{projectRoot}/build"
-        ]
-      },
-      "build:docs": {
-        "dependsOn": [
-          "build"
-        ],
-        "outputs": "{projectRoot}/docs"
-      },
-      "package": {
-        "dependsOn": [
-          "build"
-        ],
-        "outputs": [
-          "{projectRoot}/dist"
-        ]
-      }
-    }
-  }
+  ]
 }
