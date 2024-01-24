@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.2](https://github.com/case-contract-testing/contract-case-boundary/compare/@contract-case/case-boundary-v0.10.1...@contract-case/case-boundary-v0.10.2) (2024-01-24)
+
+
+### Bug Fixes
+
+* include all dependencies in jsii package ([5f8ae7b](https://github.com/case-contract-testing/contract-case-boundary/commit/5f8ae7b764d33a3cf6d236e9fe5ca37af659bb9b))
+
 ## [0.10.1](https://github.com/case-contract-testing/contract-case/compare/@contract-case/case-boundary-v0.10.0...@contract-case/case-boundary-v0.10.1) (2024-01-23)
 
 
