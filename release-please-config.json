@@ -1,0 +1,15 @@
+{
+  "plugins": [{ "type": "node-workspace" }],
+  "group-pull-request-title-pattern": "chore: release ${component} ${scope} ${version}",
+  "pull-request-title-pattern": "chore: release ${component} ${scope} ${version}",
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+  "packages": {
+    ".": {
+      "component": "@contract-case/case-boundary",
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "changelog-path": "CHANGELOG.md"
+    }
+  }
+}
