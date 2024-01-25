@@ -26,7 +26,7 @@ export interface ContractCaseBoundaryConfig {
   /**
    * The name of the provider for this contract.
    */
-  readonly providerName: string;
+  readonly providerName?: string;
 
   /**
    * The name of the consumer for this contract.
@@ -66,7 +66,7 @@ export interface ContractCaseBoundaryConfig {
    * implementation detail, and authors of DSL layers shouldn't expose it to
    * clients.
    */
-  readonly testRunId: string;
+  readonly testRunId?: string;
 
   /**
    * Whether results should be printed on standard out
