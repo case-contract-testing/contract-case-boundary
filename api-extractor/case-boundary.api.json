@@ -2710,7 +2710,7 @@
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "readonly providerName: "
+                  "text": "readonly providerName?: "
                 },
                 {
                   "kind": "Content",
@@ -2722,7 +2722,7 @@
                 }
               ],
               "isReadonly": true,
-              "isOptional": false,
+              "isOptional": true,
               "releaseTag": "Public",
               "name": "providerName",
               "propertyTypeTokenRange": {
@@ -2805,7 +2805,7 @@
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "readonly testRunId: "
+                  "text": "readonly testRunId?: "
                 },
                 {
                   "kind": "Content",
@@ -2817,7 +2817,7 @@
                 }
               ],
               "isReadonly": true,
-              "isOptional": false,
+              "isOptional": true,
               "releaseTag": "Public",
               "name": "testRunId",
               "propertyTypeTokenRange": {

@@ -9,5 +9,5 @@ Unique ID for this segment of the test run - it must be unique within a run, but
 **Signature:**
 
 ```typescript
-readonly testRunId: string;
+readonly testRunId?: string;
 ```

@@ -9,5 +9,5 @@ The name of the provider for this contract.
 **Signature:**
 
 ```typescript
-readonly providerName: string;
+readonly providerName?: string;
 ```

@@ -157,10 +157,10 @@ export interface ContractCaseBoundaryConfig {
     readonly contractFilename?: string;
     readonly logLevel?: string;
     readonly printResults?: boolean;
-    readonly providerName: string;
+    readonly providerName?: string;
     readonly publish?: string | undefined;
     readonly stateHandlers?: Record<string, BoundaryStateHandler>;
-    readonly testRunId: string;
+    readonly testRunId?: string;
     readonly throwOnFail?: boolean;
     readonly triggerAndTest?: ITriggerFunction;
     readonly triggerAndTests?: Record<string, ITriggerFunction>;
