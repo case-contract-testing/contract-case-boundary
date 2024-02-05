@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.3](https://github.com/case-contract-testing/contract-case-boundary/compare/@contract-case/case-boundary-v0.10.2...@contract-case/case-boundary-v0.10.3) (2024-02-05)
+
+
+### Bug Fixes
+
+* Change config so that `providerName` and `testRunId` aren't required. Since the config is nestable, these aren't always going to be present. ([96203ea](https://github.com/case-contract-testing/contract-case-boundary/commit/96203ea3d95a96962ccb7ace972cd7fe0c875f57))
+* Update contract-case core version to 0.15.5 ([706c66c](https://github.com/case-contract-testing/contract-case-boundary/commit/706c66c30e69685d9a2295ed7d195923369b346c))
+
 ## [0.10.3](https://github.com/case-contract-testing/contract-case-boundary/compare/@contract-case/case-boundary-v0.10.2...@contract-case/case-boundary-v0.10.3) (2024-01-30)
 
 
