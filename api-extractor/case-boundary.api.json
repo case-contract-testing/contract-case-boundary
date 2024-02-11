@@ -2986,7 +2986,7 @@
             {
               "kind": "MethodSignature",
               "canonicalReference": "@contract-case/case-boundary!IInvokeCoreTest#verify:member(1)",
-              "docComment": "/**\n * Call this to tell the ContractCase core to actually invoke the test. During verification, by default failed verification doesn't return an error Result, but failed configuration or core bugs will.\n */\n",
+              "docComment": "/**\n * Call this to tell the ContractCase core to actually invoke the test.\n *\n * Note that during verification, a failed verification doesn't return an error Result, but failed configuration or core bugs will. This is the intended default behaviour - as a failed verification doesn't necessarily indicate a problem in the code that is being verified.\n *\n * @returns a promise that indicates the result of verifying this test (BoundaryResult)\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -3417,7 +3417,7 @@
             {
               "kind": "MethodSignature",
               "canonicalReference": "@contract-case/case-boundary!IRunTestCallback#runTest:member(1)",
-              "docComment": "/**\n * Called once for each test in a Verification run. In an implementation, you should tell your test runner that it is running a test, and what the name of the test is.\n *\n * @param testName - The name of this test\n *\n * @param invoker - an IInvokeCoreTest to tell the ContractCase core that you'd like it to run the test.\n */\n",
+              "docComment": "/**\n * Called once for each test in a Verification run. In an implementation, you should tell your test runner that it is running a test, and what the name of the test is.\n *\n * @param testName - The name of this test\n *\n * @param invoker - an IInvokeCoreTest to tell the ContractCase core that you'd like it to run the test.\n *\n * @returns a promise that indicates the result of calling the invoker (BoundaryResult)\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -3442,8 +3442,21 @@
                 },
                 {
                   "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
                   "text": "BoundaryResult",
                   "canonicalReference": "@contract-case/case-boundary!BoundaryResult:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
                 },
                 {
                   "kind": "Content",
@@ -3453,7 +3466,7 @@
               "isOptional": false,
               "returnTypeTokenRange": {
                 "startIndex": 5,
-                "endIndex": 6
+                "endIndex": 9
               },
               "releaseTag": "Public",
               "overloadIndex": 1,

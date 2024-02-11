@@ -9,7 +9,7 @@ Called once for each test in a Verification run. In an implementation, you shoul
 **Signature:**
 
 ```typescript
-runTest(testName: string, invoker: IInvokeCoreTest): BoundaryResult;
+runTest(testName: string, invoker: IInvokeCoreTest): Promise<BoundaryResult>;
 ```
 
 ## Parameters
@@ -21,4 +21,6 @@ runTest(testName: string, invoker: IInvokeCoreTest): BoundaryResult;
 
 **Returns:**
 
-[BoundaryResult](./case-boundary.boundaryresult.md)
+Promise&lt;[BoundaryResult](./case-boundary.boundaryresult.md)<!-- -->&gt;
+
+a promise that indicates the result of calling the invoker (BoundaryResult)

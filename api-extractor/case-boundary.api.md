@@ -189,7 +189,7 @@ export interface IResultPrinter {
 
 // @public
 export interface IRunTestCallback {
-    runTest(testName: string, invoker: IInvokeCoreTest): BoundaryResult;
+    runTest(testName: string, invoker: IInvokeCoreTest): Promise<BoundaryResult>;
 }
 
 // @public

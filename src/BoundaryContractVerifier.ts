@@ -37,12 +37,13 @@ class CoreInvoker implements IInvokeCoreTest {
 
 const wrapCallback =
   (callback: IRunTestCallback): RunTestCallback =>
-  (testName: string, verify: () => Promise<unknown>) => {
-    handleVoidResult(
-      callback.runTest(testName, new CoreInvoker(verify)),
-      'CaseCoreError',
-    );
-  };
+  (testName: string, verify: () => Promise<unknown>) =>
+    callback
+      .runTest(testName, new CoreInvoker(verify))
+      .then(
+        (result) => handleVoidResult(result, 'CaseCoreError'),
+        jsErrorToFailure,
+      );
 
 /**
  * A BoundaryContractDefiner allows verifying contracts

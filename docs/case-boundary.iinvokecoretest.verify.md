@@ -4,7 +4,9 @@
 
 ## IInvokeCoreTest.verify() method
 
-Call this to tell the ContractCase core to actually invoke the test. During verification, by default failed verification doesn't return an error Result, but failed configuration or core bugs will.
+Call this to tell the ContractCase core to actually invoke the test.
+
+Note that during verification, a failed verification doesn't return an error Result, but failed configuration or core bugs will. This is the intended default behaviour - as a failed verification doesn't necessarily indicate a problem in the code that is being verified.
 
 **Signature:**
 
@@ -15,3 +17,5 @@ verify(): Promise<BoundaryResult>;
 **Returns:**
 
 Promise&lt;[BoundaryResult](./case-boundary.boundaryresult.md)<!-- -->&gt;
+
+a promise that indicates the result of verifying this test (BoundaryResult)
