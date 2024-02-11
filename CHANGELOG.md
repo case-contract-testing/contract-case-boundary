@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.11.0](https://github.com/case-contract-testing/contract-case-boundary/compare/@contract-case/case-boundary-v0.10.3...@contract-case/case-boundary-v0.11.0) (2024-02-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* IRunTestCallback now returns a promise instead of a raw BoundaryResult
+
+### Bug Fixes
+
+* Bump contract-case core version to 0.15.6 ([10b429a](https://github.com/case-contract-testing/contract-case-boundary/commit/10b429afef5dc3b8bf0bc974b1859e615cbe2639))
+
+
+### Code Refactoring
+
+* IRunTestCallback now returns a promise instead of a raw BoundaryResult ([17766f3](https://github.com/case-contract-testing/contract-case-boundary/commit/17766f3293991b6d935a0008aa70a63fb3bb5381))
+
 ## [0.10.4](https://github.com/case-contract-testing/contract-case-boundary/compare/@contract-case/case-boundary-v0.10.3...@contract-case/case-boundary-v0.10.4) (2024-02-11)
 
 
