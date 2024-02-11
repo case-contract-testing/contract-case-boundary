@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/case-contract-testing/case.git"
+    "url": "git+ssh://git@github.com/case-contract-testing/contract-case-boundary.git"
   },
   "scripts": {
     "prebuild": "rimraf build",
     "build": "jsii",
     "build:docs": "api-extractor run --verbose && api-documenter markdown --input-folder api-extractor --output-folder docs && npm run format:fix",
     "build:docs:local": "api-extractor run --local --verbose && api-documenter markdown --input-folder api-extractor --output-folder docs && npm run format:fix",
-    "prepackage": "rimraf dist && npm run build:docs",
+    "prepackage": "rimraf dist && npm run build && npm run build:docs",
     "package": "jsii-pacmak",
     "publish:maven": "publib-maven",
     "lint": "eslint src --ext .ts --config .eslintrc.json",
