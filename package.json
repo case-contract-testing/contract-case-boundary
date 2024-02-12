@@ -65,7 +65,7 @@
     "@contract-case/case-maintainer-config": "0.0.4",
     "@contract-case/eslint-config-case-maintainer": "0.0.3",
     "@microsoft/api-documenter": "^7.23.23",
-    "@microsoft/api-extractor": "^7.39.4",
+    "@microsoft/api-extractor": "^7.40.1",
     "@types/jest": "^29.5.12",
     "jsii": "^5.3.16",
     "jsii-docgen": "^10.3.14",
