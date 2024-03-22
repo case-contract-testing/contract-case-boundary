@@ -29,7 +29,8 @@ class CoreInvoker implements IInvokeCoreTest {
   }
 
   async verify(): Promise<BoundaryResult> {
-    return this.coreVerify()
+    return Promise.resolve()
+      .then(() => this.coreVerify())
       .then(() => new BoundarySuccess())
       .catch(jsErrorToFailure);
   }
@@ -38,12 +39,10 @@ class CoreInvoker implements IInvokeCoreTest {
 const wrapCallback =
   (callback: IRunTestCallback): RunTestCallback =>
   (testName: string, verify: () => Promise<unknown>) =>
-    callback
-      .runTest(testName, new CoreInvoker(verify))
-      .then(
-        (result) => handleVoidResult(result, 'CaseCoreError'),
-        jsErrorToFailure,
-      );
+    Promise.resolve()
+      .then(() => callback.runTest(testName, new CoreInvoker(verify)))
+      .then((result) => handleVoidResult(result, 'CaseCoreError'))
+      .catch(jsErrorToFailure);
 
 /**
  * A BoundaryContractDefiner allows verifying contracts
