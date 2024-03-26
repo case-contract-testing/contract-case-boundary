@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.1](https://github.com/case-contract-testing/contract-case-boundary/compare/@contract-case/case-boundary-v0.11.0...@contract-case/case-boundary-v0.11.1) (2024-03-26)
+
+
+### Bug Fixes
+
+* Fix issue where sometimes the boundary didn't correctly catch errors ([b6d99ec](https://github.com/case-contract-testing/contract-case-boundary/commit/b6d99ec68c56fcace20c18e68a19ad5de11381ce))
+
 ## [0.11.0](https://github.com/case-contract-testing/contract-case-boundary/compare/@contract-case/case-boundary-v0.10.3...@contract-case/case-boundary-v0.11.0) (2024-02-11)
 
 
